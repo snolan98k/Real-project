@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <form onsubmit="addDonation()" method="get">
+        First name: <input type="text" id="fname"><br>
+        Last name: <input type="text" id="lname"><br>
+        Donation amount: $<input type="number" id="Donation"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+
+        var config = {
+            apiKey: "AIzaSyADal6zffVZta4iCM6c2rt0z912h0HmUtg",
+            authDomain: "real-project-68643.firebaseapp.com",
+            databaseURL: "https://real-project-f550f.firebaseio.com",
+            projectId: "real-project-f550f",
+            storageBucket: "real-project-68643.appspot.com",
+            messagingSenderId: "269825768903"
+        };
+        firebase.initializeApp(config);
+
+        function addDonation(event) {
+            event.preventDefault()
+
+            var firstname = $("#fname").val()
+            var lastname = $("#lname").val()
+            var DonationAmount = $("#Donation").val()
+            var NewDonation = {
+                firstname: firstname,
+                lastname: lastname,
+                DonationAmount: DonationAmount,
+
+
+            }
+            console.log(NewDonation)
+
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
