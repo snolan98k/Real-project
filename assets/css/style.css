@@ -1,0 +1,209 @@
+    /* about page */
+    .card-header {
+        background-color: white;
+        text-emphasis-color: white;
+    }
+
+    .card-body {
+        background-color: palevioletred;
+    }
+
+    body {
+        background-image: url("file:///Users/danmitchell/Downloads/background_with_breast_cancer_awareness_pink_ribbons3-.jpg");
+        height: 900px;
+
+    }
+
+
+    /* contact page */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url("file:///Users/danmitchell/Downloads/Marking-Strides-Against-Breast-Cancer.png")
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Add padding to containers */
+    .container {
+        padding: 16px;
+        background-color: white;
+        background-image: url("file:///Users/danmitchell/Downloads/239078_standard.jpeg")
+    }
+
+    /* Full-width input fields */
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    /* Overwrite default styles of hr */
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+    /* Set a style for the submit button */
+    .registerbtn {
+        background-color: palevioletred;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    .registerbtn:hover {
+        opacity: 1;
+    }
+
+    /* Add a blue text color to links */
+    a {
+        color: dodgerblue;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+
+    /* Home page */
+    @media screen and (max-width:959px) {
+        .container {
+            width: 100%;
+        }
+
+        .jumbotron {
+            width: 100%;
+        }
+
+    }
+
+    @media screen and (max-width:640px) {
+        .container .quote {
+            width: 100%;
+        }
+
+        .pic {
+            width: 100%;
+        }
+
+        .container .btn {
+            width: 100%;
+        }
+
+        .facts {
+            text-align: center;
+        }
+    }
+
+    .facts {
+        text-align: center;
+
+
+    }
+
+
+
+
+    body {
+
+        background-image: url("file:///Users/danmitchell/Downloads/parade%201.jpg.gallery%20(1).jpg");
+    }
+
+    .jumbotron {
+        background-color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        -webkit-text-fill-color: pink;
+    }
+
+    .container .quote {
+        position: absolute;
+        top: 20%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        color: palevioletred;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+
+    }
+
+
+    .container .btn {
+        position: absolute;
+        top: 75%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: palevioletred;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+    }
+
+    .topnav #myLinks {
+        display: none;
+    }
+
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    .topnav a.icon {
+        background: white;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .active {
+        background-color: palevioletred;
+        color: white;
+    }
+
+    /* Map page */
+        body {
+            background-image: url("file:///Users/danmitchell/Downloads/parade%201.jpg.gallery%20(1).jpg");
+            height: 900px;
+            text-align: center;
+        }
