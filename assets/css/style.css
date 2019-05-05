@@ -16,37 +16,30 @@
     }
 
     .quote {
-        position: absolute;
         font-size: 3em;
         text-align: center;
-        top: 60%;
-        left: 80%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
         color: palevioletred;
         cursor: pointer;
+        margin-top: 160px;
     }
 
-    .index-container .btn {
-        position: absolute;
-        top: 75%;
-        left: 75%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
+    .btn.btn-primary {
+        text-align: center;
         background-color: palevioletred;
         color: white;
-        font-size: 5em;
+        font-size: 4.5em;
         padding: 12px 24px;
-        border: none;
+        border-radius: 10px;
+        border-color: white;
         cursor: pointer;
-        border-radius: 5px;
-        text-align: center;
+        margin: 20px;
     }
 
     .story {
-        font-size: 1.5em;
-        margin-left: 40px;
+        font-size: 2em;
+        margin-top: 150px;
         padding: 20px;
+        color: rgb(36, 25, 25);
     }
 
     /* .topnav {
@@ -106,37 +99,43 @@
     } */
 
     /* about page */
-    .about-page {
-        background-image: url("../images/index_background");
-        height: 900px;
-    }
-    .card-header {
-        background-color: white;
-        text-emphasis-color: white;
+    .container_about {
+        width: 80%;
+        margin: auto;
+        font-size: 1.2em;
     }
 
     .card-body {
         background-color: palevioletred;
+        text-align: center;
     }
-
 
     /* contact page */
-    /* .contact-page {
-        background-image: url("../images/contact_girl.png")
-    } */
-
-    * {
+    .container_contact {
         box-sizing: border-box;
+        background-image: url("../images/contact_girl.png");
+        background-repeat: no-repeat;
+        background-size: 900px;
+        font-size: 1.5em;
+        width: 70%;
+        margin: auto;
+        padding: 20px;
+        background-color: white;
     }
 
-    /* Add padding to containers */
-    .contact-page-container {
+    .container_contact h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .container_signin {
+        background-color: #f1f1f1;
+        text-align: center;
         font-size: 1.5em;
-        width: 80%;
+        text-align: center;
+        width: 70%;
         margin: auto;
-        padding: 16px;
-        background-color: white;
-        /* background-image: url("../images/marking-strides-against-breast-cancer.png") */
+        padding: 10px;
     }
 
     /* Full-width input fields */
@@ -183,15 +182,12 @@
         color: dodgerblue;
     }
 
-    /* Set a grey background color and center the text of the "sign in" section */
-    .signin {
-        background-color: #f1f1f1;
-        text-align: center;
-    }
-
     /* Map page */
-        .map {
+        .container_map {
             /* background-image: url("../images/parade.png"); */
             height: 900px;
             text-align: center;
+            font-size: 1.6em;
+            margin: auto;
+            padding: 20px;
         }
