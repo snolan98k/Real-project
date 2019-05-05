@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>Donation</title>
+
+</head>
+
+<body>
+
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="maps.html">Maps</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="donation.html">Donation</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Donation</h1>
+            <h3 class="text-center">Look Good, Feel Good</h3>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                    <div class="card-body">
+
+                        <h3 class="text-center"></h3>
+                        <strong>Also please view our About page </strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="">
+                                    <strong>Donation Amount</strong>
+                                    <span class="Donation amount"></span>
+                                </h3>
+                                <hr>
+                                <h3 class="">Wigs
+
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                    <div class="card-header">
+                        READY
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="email-name"></label>
+                                <input class="form-control" id="user-name" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="donation"></label>
+                                <input class="form-control" id="donation-price" type="text">
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
+
+    <form onsubmit="addDonation()" method="get">
+        Email name: <input type="text" id="Email"><br>
+        <!-- Last name: <input type="text" id="lname"><br> -->
+        Donation amount: $<input type="number" id="Donation"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script><!-- Firebase Reference -->
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyADal6zffVZta4iCM6c2rt0z912h0HmUtg",
+            authDomain: "real-project-f550f.firebaseapp.com",
+            databaseURL: "https://real-project-f550f.firebaseio.com",
+            projectId: "real-project-f550f",
+            storageBucket: "real-project-f550f.appspot.com",
+            messagingSenderId: "269825768903",
+            appId: "1:269825768903:web:be38a868db46ff5e",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        var database = firebase.database();
+
+        // 2. Button for adding 
+        $("#add-Fname-btn").on("click", function (event) {
+            event.preventDefault();
+
+            // Grabs user input
+
+            // var firstname = $("#fname-input").val().trim();
+            var emailName = $("#emailName-input").val().trim();
+            var DonationStart = $("#Donation-inpu").val().trim();
+            var NewDonation = $("#Ndonation-input").val().trim();
+
+
+            function addDonation(event) {
+                event.preventDefault()
+
+                // Creates local "temporary" object for holding employee data
+
+                var emailName = $("#emailName").val()
+                var DonationStart = $("#Donatio").val()
+                var DonationAmount = $("#Donation").val()
+
+                // Creates local "temporary" object for holding employee data 
+
+
+                var NewDonation = {
+                    emailName: emailName,
+                    donationName: donationName,
+                    DonationAmount: DonationAmount,
+
+                };
+
+                console.log(NewDonation)
+
+
+
+
+            }
+
+
+
+    
+
+</body >
+
+</html >
