@@ -23,18 +23,6 @@
         margin-top: 160px;
     }
 
-    .btn.btn-primary {
-        text-align: center;
-        background-color: palevioletred;
-        color: white;
-        font-size: 4.5em;
-        padding: 12px 24px;
-        border-radius: 10px;
-        border-color: white;
-        cursor: pointer;
-        margin: 20px;
-    }
-
     .story {
         font-size: 2em;
         margin-top: 150px;
@@ -190,4 +178,41 @@
             font-size: 1.6em;
             margin: auto;
             padding: 20px;
+        }
+
+    /* Donation page */
+        .container_donation {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            font-size: 1.5em;
+        }
+        .jumbotron {
+            background: rgb(199, 79, 109);
+        }
+
+        .container_donation h1 {
+            color: white;
+            font-size: 2em;
+        }
+
+        .container_donation h3 {
+            color: white;
+            font-size: 1.2em;
+        }
+
+       .btn.btn-primary {
+        text-align: center;
+        background-color: palevioletred;
+        color: white;
+        font-size: 2.5em;
+        padding: 12px 24px;
+        border-radius: 10px;
+        border-color: white;
+        cursor: pointer;
+        margin: 20px;
+        }   
+
+        .form-control {
+            font-size: 1.2em;
         }
