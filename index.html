@@ -9,7 +9,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
+    <link href="https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDrBgrA85X6tDFAFR7X7kpuSVAt4huDoKY"
+        rel="stylesheet">
     <title>Home</title>
 </head>
 
@@ -70,6 +71,17 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('webfont', '1');
+        google.setOnLoadCallback(function () {
+            WebFont.load({
+                google: {
+                    families: ['Just Another Hand']
+                }
+            });
+        });
+    </script>
 
 </body>
 

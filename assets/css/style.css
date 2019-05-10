@@ -8,7 +8,8 @@
         font-size: 2em;
     }
 
-     /* Home page */
+    /* Home page */
+
     .index-container {
         width: 90%;
         text-align: center;
@@ -61,7 +62,7 @@
         color: black;
     } */
 
-/*     
+    /*     
     @media screen and (max-width:959px) {
         .index-container {
             width: 100%;
@@ -87,6 +88,7 @@
     } */
 
     /* about page */
+
     .container_about {
         width: 80%;
         margin: auto;
@@ -99,6 +101,7 @@
     }
 
     /* contact page */
+
     .container_contact {
         box-sizing: border-box;
         background-image: url("../images/contact_girl.png");
@@ -127,8 +130,8 @@
     }
 
     /* Full-width input fields */
-    input[type=text],
-    input[type=password] {
+
+    input[type=text], input[type=password] {
         width: 100%;
         padding: 15px;
         margin: 5px 0 22px 0;
@@ -137,19 +140,20 @@
         background: #f1f1f1;
     }
 
-    input[type=text]:focus,
-    input[type=password]:focus {
+    input[type=text]:focus, input[type=password]:focus {
         background-color: #ddd;
         outline: none;
     }
 
     /* Overwrite default styles of hr */
+
     hr {
         border: 1px solid #f1f1f1;
         margin-bottom: 25px;
     }
 
     /* Set a style for the submit button */
+
     .registerbtn {
         background-color: palevioletred;
         color: white;
@@ -166,42 +170,46 @@
     }
 
     /* Add a blue text color to links */
+
     a {
         color: dodgerblue;
     }
 
     /* Map page */
-        .container_map {
-            /* background-image: url("../images/parade.png"); */
-            height: 900px;
-            text-align: center;
-            font-size: 1.6em;
-            margin: auto;
-            padding: 20px;
-        }
+
+    .container_map {
+        /* background-image: url("../images/parade.png"); */
+        height: 900px;
+        text-align: center;
+        font-size: 1.6em;
+        margin: auto;
+        padding: 20px;
+    }
 
     /* Donation page */
-        .container_donation {
-            width: 80%;
-            text-align: center;
-            margin: auto;
-            font-size: 1.5em;
-        }
-        .jumbotron {
-            background: rgb(199, 79, 109);
-        }
 
-        .container_donation h1 {
-            color: white;
-            font-size: 2em;
-        }
+    .container_donation {
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        font-size: 1.5em;
+    }
 
-        .container_donation h3 {
-            color: white;
-            font-size: 1.2em;
-        }
+    .jumbotron {
+        background: rgb(199, 79, 109);
+    }
 
-       .btn.btn-primary {
+    .container_donation h1 {
+        color: white;
+        font-size: 2em;
+    }
+
+    .container_donation h3 {
+        color: white;
+        font-size: 1.2em;
+    }
+
+    .btn.btn-primary {
         text-align: center;
         background-color: palevioletred;
         color: white;
@@ -211,8 +219,8 @@
         border-color: white;
         cursor: pointer;
         margin: 20px;
-        }   
+    }
 
-        .form-control {
-            font-size: 1.2em;
-        }
+    .form-control {
+        font-size: 1.2em;
+    }
