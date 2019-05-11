@@ -43,37 +43,142 @@
     </div>
 
     <div class="container_donation">
-        <br>
-        <!-- Jumbotron Title -->
+        <!-- Jumbotron -->
         <div class="jumbotron">
-            <h1>Donations</h1>
-            <h3>"Look Good, Feel Good"</h3>
+            <h1 class="text-center">Donation page!</h1>
         </div>
-        <!-- Donation -->
         <div class="row">
-            <div class="col-md-12">
+
+            <!-- Sign-Up Card-->
+            <div class="col-lg-6">
                 <div class="card card-default">
+                    <div class="card-header">
+                        Look Good, Feel Good!
+                    </div>
                     <div class="card-body">
-                        <form>
+
+                        <!-- Sign-up Form (note the various input "types")-->
+                        <form role="form">
                             <div class="form-group row">
-                                <label for="donator-name">Name</label>
-                                <input class="form-control" id="name" type="text">
+                                <label for="name-input">Name:</label>
+                                <input class="form-control" id="name-input" type="text">
                             </div>
                             <div class="form-group row">
-                                <label for="email-address">Email Address</label>
-                                <input class="form-control" id="email-address" type="text">
+                                <label for="email-input">Email:</label>
+                                <input class="form-control" id="email-input" type="email">
                             </div>
                             <div class="form-group row">
-                                <label for="donation-amount">Donation Amount: $</label>
-                                <input class="form-control" id="donation-price" type="number">
+                                <label for="donation-amount-input">Donation Amout $:</label>
+
+                                <input class="form-control" id="donation-amount-input" type="number">
                             </div>
-                            <button class="btn btn-primary" id="submit-bid" type="submit">Donate</button>
+                            <div class="form-group row">
+                                <label for="comment-input">How did you hear about us?</label>
+                                <textarea class="form-control" id="comment-input" rows="5"></textarea>
+                            </div>
+                            <button class="btn btn-default" id="add-user" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
+
+            <!-- Most Recent Member Card -->
+            <div class="col-lg-6">
+                <div class="card card-default">
+                    <div class="card-header">
+                        Most Recent Member
+                    </div>
+                    <div class="card-body" id="recent-member">
+                        <h2 id="name-display">Jimmy John</h2>
+                        <h4 id="email-display">Email: jimmy@john.edu</h4>
+                        <h4 id="donation-display">Donation Amount: $</h4>
+                        <p id="comment-display">I'm signing up, because I want to spread Brest Cancer Awareness to the
+                            world.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
     </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- LINK TO FIREBASE GOES HERE -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <!-- Script -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <!-- <script src="/__/firebase/6.0.0/firebase-app.js"></script> -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use --> -->
+    <!-- https://firebase.google.com/docs/web/setup#reserved-urls
+
+ Initialize Firebase -->
+    <!-- <script src="/__/firebase/init.js"></script> -->
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBX47_jo2SukE4Rj1ntBJVsOh-XBrPVtOM",
+            authDomain: "contact-form-83f90.firebaseapp.com",
+            databaseURL: "https://contact-form-83f90.firebaseio.com",
+            projectId: "contact-form-83f90",
+            storageBucket: "contact-form-83f90.appspot.com",
+            messagingSenderId: "922341667118",
+            appId: "1:922341667118:web:41cab26d1b1f1669"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        var database = firebase.database();
+
+        // Initial Values
+        var name = "";
+        var email = "";
+        var comment = "";
+
+        // Capture Button Click
+        $("#add-user").on("click", function (event) {
+            // Don't refresh the page!
+            event.preventDefault();
+
+
+            // Code in the logic for storing and retrieving the most recent user.
+            // Don't forget to provide initial data to your Firebase database.
+            name = $("#name-input").val().trim();
+            email = $("#email-input").val().trim();
+            comment = $("#comment-input").val().trim();
+
+            database.ref().set({
+                name: name,
+                email: email,
+                comment: comment
+            });
+
+        });
+
+        // Firebase watcher + initial loader HINT: .on("value")
+        database.ref().on("value", function (snapshot) {
+
+            // Log everything that's coming out of snapshot
+            console.log(snapshot.val());
+            console.log(snapshot.val().name);
+            console.log(snapshot.val().email);
+            console.log(snapshot.val().comment);
+
+            // Change the HTML to reflect
+            $("#name-display").text(snapshot.val().name);
+            $("#email-display").text(snapshot.val().email);
+            $("#comment-display").text(snapshot.val().comment);
+
+            // Handle the errors
+        }, function (errorObject) {
+            console.log("Errors handled: " + errorObject.code);
+        });
+
+    </script>
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script type="text/javascript">
         google.load('webfont', '1');
@@ -82,10 +187,9 @@
                 google: {
                     families: ['Just Another Hand']
                 }
-            });git 
+            }); git
         });
     </script>
-
 </body>
 
 </html>
