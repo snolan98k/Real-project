@@ -1,6 +1,6 @@
     html {
         font-size: 1rem;
-        font-family: 'Just Another Hand', cursive;
+        font-family: 'Amatic SC', cursive;
     }
 
     .nav-link {
@@ -56,20 +56,20 @@
 
     /* Register page */
 
-    .container_contact {
+    .container_register {
         box-sizing: border-box;
         background-image: url("../images/contact_girl.png");
         background-repeat: no-repeat;
         background-size: 900px;
-        font-size: 1.5em;
+        font-size: 2em;
         width: 70%;
-        margin: auto;
+        margin: 20px auto ;
         padding: 20px;
         background-color: white;
     }
 
-    .container_contact h1 {
-        font-size: 1.8em;
+    h1 {
+        font-size: 1.5em;
         margin-bottom: 15px;
     }
 
@@ -152,10 +152,9 @@
     /* Optional: Makes the sample page fill the window. */
 
     #description {
-        font-family: 'Amatic SC', cursive;
-        ;
-        font-size: 15px;
-        font-weight: 300;
+    font-family: 'Amatic SC', cursive;
+    font-size: 15px;
+    font-weight: 300;
     }
 
     #infowindow-content .title {
@@ -171,15 +170,14 @@
     }
 
     .pac-card {
-        margin: 10px 10px 0 0;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        background-color: #fff;
-        font-family: 'Amatic SC', cursive;
-        ;
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-family: 'Amatic SC', cursive;
     }
 
     #pac-container {
@@ -193,10 +191,9 @@
     }
 
     .pac-controls label {
-        font-family: 'Amatic SC', cursive;
-        ;
-        font-size: 20px;
-        font-weight: 300;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    font-weight: 300;
     }
 
     #pac-input {
@@ -259,7 +256,7 @@
         border-radius: 10px;
         border-color: white;
         cursor: pointer;
-        margin: 20px;
+        margin: 20px 0 0 30px;
     }
 
     .form-control {
