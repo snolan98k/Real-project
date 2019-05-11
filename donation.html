@@ -43,7 +43,8 @@
     <div class="container_donation">
         <!-- Jumbotron -->
         <div class="jumbotron">
-            <h1 class="text-center">Donation page!</h1>
+            <h1 class="text-center">Donate Here!</h1>
+            <p>Every Penny Matters</p>
         </div>
         <div class="row">
 
@@ -55,7 +56,7 @@
                     </div>
                     <div class="card-body">
 
-                        <!-- Sign-up Form (note the various input "types")-->
+                        <!-- Sign-up Form -->
                         <form role="form">
                             <div class="form-group row">
                                 <label for="name-input">Name:</label>
@@ -86,11 +87,23 @@
                         Most Recent Donation
                     </div>
                     <div class="card-body" id="recent-member">
-                        <h2 id="name-display">Mark Thompson</h2>
-                        <h4 id="email-display">Email: mark@harvardextension.edu</h4>
-                        <h4 id="donation-display">Donation Amount: $</h4>
-                        <p id="comment-display">I'm signing up, because I want to spread Brest Cancer Awareness to the
-                            world.</p>
+                        <h2>
+                            <strong>Name:</strong>
+                            <span id="name-display"></span>
+                        </h2>
+                        <!-- <h4>
+                            <strong>Email:</strong>
+                            <span id="email-display"></span>
+                        </h4> -->
+                        <h4>
+                            <strong>Donation: $</strong>
+                            <span id="donation-amount-display"></span>
+                        </h4>
+                        <!-- <p>
+                            <span id="name-display">
+                                I'm signing up, because I want to spread Brest Cancer Awareness to
+                                the world.</span>
+                        </p> -->
                     </div>
                 </div>
             </div>
@@ -165,7 +178,7 @@
             // Change the HTML to reflect
             $("#name-display").text(snapshot.val().name);
             $("#email-display").text(snapshot.val().email);
-            $("#donation-display").text(snapshot.val().donation);
+            $("#donation-amount-display").text(snapshot.val().donation);
             $("#comment-display").text(snapshot.val().comment);
 
             // Handle the errors
