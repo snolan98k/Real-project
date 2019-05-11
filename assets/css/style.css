@@ -56,20 +56,20 @@
     
     /* Register page */
 
-    .container_contact {
+    .container_register {
         box-sizing: border-box;
         background-image: url("../images/contact_girl.png");
         background-repeat: no-repeat;
         background-size: 900px;
-        font-size: 1.5em;
+        font-size: 2em;
         width: 70%;
-        margin: auto;
+        margin: 20px auto ;
         padding: 20px;
         background-color: white;
     }
 
-    .container_contact h1 {
-        font-size: 1.8em;
+    h1 {
+        font-size: 1.5em;
         margin-bottom: 15px;
     }
 
@@ -255,7 +255,7 @@
         border-radius: 10px;
         border-color: white;
         cursor: pointer;
-        margin: 20px;
+        margin: 20px 0 0 30px;
     }
 
     .form-control {
