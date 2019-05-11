@@ -12,10 +12,18 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Ubuntu+Condensed" rel="stylesheet">
     <title>Get Your Wigs</title>
 </head>
+<style>
+    .btn {
+        align-content: center;
+
+    }
+</style>
 
 
 <body>
@@ -63,7 +71,7 @@
                 <div id="shopping link">
                     <div class="row">
                         <div class="col-5">
-                            <button type="button" class="btn btn-secondary btn-block">
+                            <button id="shop" type="button" class="btn btn-secondary btn-block">
                                 <a href="https://www.amazon.com/s?k=wigs&ref=nb_sb_noss_1">Shop Here</a></button>
                         </div>
                     </div>
@@ -156,12 +164,13 @@
                     });
                     map.fitBounds(bounds);
                 });
+            }
 
-          
-    </script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3wmK6NTXCTKNgIMX2Bf-vSWeqHdJZAFM&libraries=places&callback=initAutocomplete"
-        async defer></script>
+
+        </script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3wmK6NTXCTKNgIMX2Bf-vSWeqHdJZAFM&libraries=places&callback=initAutocomplete"
+            async defer></script>
 
 </body>
 
