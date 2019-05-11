@@ -83,11 +83,11 @@
             <div class="col-lg-6">
                 <div class="card card-default">
                     <div class="card-header">
-                        Most Recent Member
+                        Most Recent Donation
                     </div>
                     <div class="card-body" id="recent-member">
-                        <h2 id="name-display">Jimmy John</h2>
-                        <h4 id="email-display">Email: jimmy@john.edu</h4>
+                        <h2 id="name-display">Mark Thompson</h2>
+                        <h4 id="email-display">Email: mark@harvardextension.edu</h4>
                         <h4 id="donation-display">Donation Amount: $</h4>
                         <p id="comment-display">I'm signing up, because I want to spread Brest Cancer Awareness to the
                             world.</p>
@@ -98,7 +98,6 @@
         </div>
 
     </div>
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
 
@@ -111,13 +110,8 @@
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
     <!-- <script src="/__/firebase/6.0.0/firebase-app.js"></script> -->
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use --> -->
-    <!-- https://firebase.google.com/docs/web/setup#reserved-urls
-
- Initialize Firebase -->
-    <!-- <script src="/__/firebase/init.js"></script> -->
-
     <script>
+        // Initialize Firebase
         const firebaseConfig = {
             apiKey: "AIzaSyBX47_jo2SukE4Rj1ntBJVsOh-XBrPVtOM",
             authDomain: "contact-form-83f90.firebaseapp.com",
@@ -134,6 +128,7 @@
         // Initial Values
         var name = "";
         var email = "";
+        var donation = 0;
         var comment = "";
 
         // Capture Button Click
@@ -141,16 +136,17 @@
             // Don't refresh the page!
             event.preventDefault();
 
-
             // Code in the logic for storing and retrieving the most recent user.
             // Don't forget to provide initial data to your Firebase database.
             name = $("#name-input").val().trim();
             email = $("#email-input").val().trim();
+            donation = $("#donation-amount-input").val().trim();
             comment = $("#comment-input").val().trim();
 
             database.ref().set({
                 name: name,
                 email: email,
+                donation: donation,
                 comment: comment
             });
 
@@ -163,11 +159,13 @@
             console.log(snapshot.val());
             console.log(snapshot.val().name);
             console.log(snapshot.val().email);
+            console.log(snapshot.val().donation);
             console.log(snapshot.val().comment);
 
             // Change the HTML to reflect
             $("#name-display").text(snapshot.val().name);
             $("#email-display").text(snapshot.val().email);
+            $("#donation-display").text(snapshot.val().donation);
             $("#comment-display").text(snapshot.val().comment);
 
             // Handle the errors
