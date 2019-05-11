@@ -67,8 +67,7 @@
                             </div>
                             <div class="form-group row">
                                 <label for="donation-amount-input">Donation Amout $:</label>
-
-                                <input class="form-control" id="donation-amount-input" type="number">
+                                <input class="form-control" id="donation-input" type="number">
                             </div>
                             <div class="form-group row">
                                 <label for="comment-input">How did you hear about us?</label>
@@ -135,6 +134,7 @@
         // Initial Values
         var name = "";
         var email = "";
+        var donation = 0;
         var comment = "";
 
         // Capture Button Click
@@ -147,12 +147,15 @@
             // Don't forget to provide initial data to your Firebase database.
             name = $("#name-input").val().trim();
             email = $("#email-input").val().trim();
+            donation = $("#donation-input").val().trim();
             comment = $("#comment-input").val().trim();
 
             database.ref().set({
                 name: name,
                 email: email,
-                comment: comment
+                donation: donation,
+                comment: comment,
+                dateAdded: firebase.database.ServerValue.TIMESTAMP
             });
 
         });
@@ -169,6 +172,7 @@
             // Change the HTML to reflect
             $("#name-display").text(snapshot.val().name);
             $("#email-display").text(snapshot.val().email);
+            $("#donation-display").text(snapshot.val().donation);
             $("#comment-display").text(snapshot.val().comment);
 
             // Handle the errors
