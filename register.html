@@ -53,12 +53,11 @@
 
                 <label for="psw"><b>Password</b></label>
                 <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
-
-                <hr>
-<!-- 
+                <br>
+              <!-- 
                 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
-
-                <button type="submit" class="registerbtn">Register</button>
+              
+                <button id="registerbtn" type="submit" class="registerbtn">Register</button>
             </div>
 
             <!-- <div class="container_signin">
@@ -106,49 +105,95 @@
         };
         firebase.initializeApp(firebaseConfig);
 
+        // Initial Values
 
-        // Create a variable to reference the database.
-        var database = firebase.database();
-        console.log(database);
+        var email = "";
+        var psw = "";
 
+        // Capture Button Click
+        $("#registerbtn").on("click", function (event) {
+            // Don't refresh the page!
+            event.preventDefault();
 
-
-
-        // call form
-        document.getElementById("contactForm").addEventListener("registerbtn", submitForm);
-
-        function submitForm(e) {
-            e.preventDefault();
-            console.log(123);
-        }
-        // get values
-
-        var email = $("#email").val().trim();
-        var psw = $("#psw").val().trim();
-        // var pswRepeat = $("#pswRepeat").val().trim();
-        // console.log(email);
-        console.log(psw);
-        // console.log(pswRepeat)
+            // YOUR TASK!!!
+            // Code in the logic for storing and retrieving the most recent user.
+            // Don't forget to provide initial data to your Firebase database.
+            psw = $("#psw").val().trim();
+            email = $("#email").val().trim();
 
 
-        // Function to get forms
-        // function getInputVal(id) {
-        //     return document.getElementById(id).value;
-        //     console.log();
-        // }
-
-        function saveMessage(email, psw) {
-            var newMessageRef = messageRef.push()
-            newMessageRef.set({
+            database.ref().set({
                 email: email,
                 psw: psw,
-                // pswRepeat: pswRepeat,
-            })
-        }
-        // database.ref("#submit").set({
-        //     highBidder: bidderName,
-        //     highPrice: bidderPrice
-        // });
+                dateAdded: firebase.database.ServerValue.TIMESTAMP
+
+            });
+
+        });
+
+        // Firebase watcher + initial loader HINT: .on("value")
+        database.ref().on("value", function (snapshot) {
+
+            // Log everything that's coming out of snapshot
+            console.log(snapshot.val());
+            console.log(snapshot.val().email);
+            console.log(snapshot.val().psw);
+
+
+            // Change the HTML to reflect
+            $("#psw").text(snapshot.val().name);
+            $("#email").text(snapshot.val().email);
+
+
+            // Handle the errors
+        }, function (errorObject) {
+            console.log("Errors handled: " + errorObject.code);
+        });
+
+
+
+        // // Create a variable to reference the database.
+        // var database = firebase.database();
+        // console.log(database);
+
+
+
+
+        // // call form
+        // document.getElementById("contactForm").addEventListener("registerbtn", submitForm);
+
+        // function submitForm(e) {
+        //     e.preventDefault();
+        //     console.log(123);
+        // }
+        // // get values
+
+        // var email = $("#email").val().trim();
+        // var psw = $("#psw").val().trim();
+        // // var pswRepeat = $("#pswRepeat").val().trim();
+        // // console.log(email);
+        // console.log(psw);
+        // // console.log(pswRepeat)
+
+
+        // // Function to get forms
+        // // function getInputVal(id) {
+        // //     return document.getElementById(id).value;
+        // //     console.log();
+        // // }
+
+        // function saveMessage(email, psw) {
+        //     var newMessageRef = messageRef.push()
+        //     newMessageRef.set({
+        //         email: email,
+        //         psw: psw,
+        //         // pswRepeat: pswRepeat,
+        //     })
+        // }
+        // // database.ref("#submit").set({
+        // //     highBidder: bidderName,
+        // //     highPrice: bidderPrice
+        // // });
 
 
 
