@@ -60,10 +60,10 @@
         box-sizing: border-box;
         background-image: url("../images/contact_girl.png");
         background-repeat: no-repeat;
-        background-size: 900px;
+        background-size: 1000px;
         font-size: 2em;
         width: 70%;
-        margin: 20px auto ;
+        margin: 30px auto ;
         padding: 20px;
         background-color: white;
     }
@@ -132,8 +132,7 @@
     /* Getwigs page */
 
     .container_getwigs {
-        /* background-image: url("../images/parade.png"); */
-        height: 900px;
+        width: 1000px;
         text-align: center;
         font-size: 1.6em;
         margin: auto;
@@ -224,6 +223,21 @@
         width: 345px;
     }
 
+    button.shoppingbtn {
+        background: rgb(219, 52, 130);
+        color: rgb(255, 255, 255);
+        padding: 30px 120px;
+        margin: auto;
+        border: solid 3px rgb(255, 207, 245);
+    }
+
+    button.shoppingbtn a{
+        background: rgb(219, 52, 130);
+        color: rgb(255, 255, 255);
+        font-size: 1.5em;
+        text-align: center;
+    }
+
     /* Donation page */
 
     .container_donation {
@@ -263,7 +277,13 @@
         font-size: 1.2em;
     }
 
-    .btn.btn-secondary {
-        font-size: 20px !important;
-        margin: auto !important;
+    #add-user {
+        font-size: 2em;
+        margin: auto;
+    }
+
+    .form-group.row {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
     }
