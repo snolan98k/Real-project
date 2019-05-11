@@ -103,44 +103,46 @@
         var psw = "";
 
         // Capture Button Click
-        $("#registerbtn").on("click", function (event) {
-            // Don't refresh the page!
-            event.preventDefault();
+        // $("#registerbtn").on("click", function (event) {
+        //     // Don't refresh the page!
+        //     event.preventDefault();
 
-            // YOUR TASK!!!
-            // Code in the logic for storing and retrieving the most recent user.
-            // Don't forget to provide initial data to your Firebase database.
-            psw = $("#psw").val().trim();
-            email = $("#email").val().trim();
-
-
-            database.ref().set({
-                email: email,
-                psw: psw,
-                dateAdded: firebase.database.ServerValue.TIMESTAMP
-
-            });
-
-        });
-
-        // Firebase watcher + initial loader HINT: .on("value")
-        database.ref().on("value", function (snapshot) {
-
-            // Log everything that's coming out of snapshot
-            console.log(snapshot.val());
-            console.log(snapshot.val().email);
-            console.log(snapshot.val().psw);
+        //     // YOUR TASK!!!
+        //     // Code in the logic for storing and retrieving the most recent user.
+        //     // Don't forget to provide initial data to your Firebase database.
+        //     psw = $("#psw").val().trim();
+        //     email = $("#email").val().trim();
 
 
-            // Change the HTML to reflect
-            $("#psw").text(snapshot.val().name);
-            $("#email").text(snapshot.val().email);
+        //     database.ref().set({
+        //         email: email,
+        //         psw: psw,
+        //         dateAdded: firebase.database.ServerValue.TIMESTAMP
+
+        //     });
+
+        // });
+
+        // // Firebase watcher + initial loader HINT: .on("value")
+        // database.ref().on("value", function (snapshot) {
+
+        //     // Log everything that's coming out of snapshot
+        //     console.log(snapshot.val());
+        //     console.log(snapshot.val().email);
+        //     console.log(snapshot.val().psw);
 
 
-            // Handle the errors
-        }, function (errorObject) {
-            console.log("Errors handled: " + errorObject.code);
-        });
+        //     // Change the HTML to reflect
+        //     // $("#psw").text(snapshot.val().name);
+        //     // $("#email").text(snapshot.val().email);
+        //     $("#psw").val("");
+        //     $("#email").val("");
+
+
+        //     // Handle the errors
+        // }, function (errorObject) {
+        //     console.log("Errors handled: " + errorObject.code);
+        // });
 
 
 
