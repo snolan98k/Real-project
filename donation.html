@@ -43,7 +43,8 @@
     <div class="container_donation">
         <!-- Jumbotron -->
         <div class="jumbotron">
-            <h1 class="text-center">Donation page!</h1>
+            <h1 class="text-center">Donate Here!</h1>
+            <p>Every Penny Matters</p>
         </div>
         <div class="row">
 
@@ -55,7 +56,7 @@
                     </div>
                     <div class="card-body">
 
-                        <!-- Sign-up Form (note the various input "types")-->
+                        <!-- Sign-up Form -->
                         <form role="form">
                             <div class="form-group row">
                                 <label for="name-input">Name:</label>
@@ -177,7 +178,7 @@
             // Change the HTML to reflect
             $("#name-display").text(snapshot.val().name);
             $("#email-display").text(snapshot.val().email);
-            $("#donation-display").text(snapshot.val().donation);
+            $("#donation-amount-display").text(snapshot.val().donation);
             $("#comment-display").text(snapshot.val().comment);
 
             // Handle the errors
